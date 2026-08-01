@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "createdAt": "2026-08-01T07:29:10.775Z",
+  "updatedAt": "2026-08-01T07:33:43.146Z",
+  "user": {
+    "name": "",
+    "style": "direct, practical, cheap/free tools, MVP first",
+    "goals": [
+      "learn coding by building real tools",
+      "make money with POSEIDON STUDIOS",
+      "build Kairos as a local-first coding agent"
+    ]
+  },
+  "preferences": {
+    "shell": "powershell",
+    "stack": [
+      "Node.js",
+      "Discord.js",
+      "Chrome extensions",
+      "PowerShell"
+    ],
+    "safety": [
+      "no token stealers",
+      "no spam/raid tools",
+      "ask before risky actions"
+    ],
+    "budget": "cheap/free first",
+    "defaultBrain": "none until configured"
+  },
+  "projects": [
+    {
+      "name": "Kairos",
+      "path": ".",
+      "type": "local coding agent",
+      "status": "active"
+    },
+    {
+      "name": "POSEIDON Discord Bot",
+      "path": "poseidon-bot",
+      "type": "discord bot",
+      "status": "active"
+    }
+  ],
+  "builds": [],
+  "notes": []
+}
