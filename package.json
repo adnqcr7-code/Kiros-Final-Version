@@ -1,0 +1,73 @@
+{
+  "name": "kairos-agent",
+  "version": "2.1.0",
+  "description": "Local-first AI agent platform with goal mode, guarded swarms, smart model routing, memory, tools, and a bundled AI skills library. Now with TypeScript, plugin system, gateway architecture, and multi-channel support.",
+  "main": "dist/src/kairos/cli.js",
+  "types": "dist/src/kairos/types/index.d.ts",
+  "scripts": {
+    "kairos": "node dist/src/kairos/cli.js",
+    "kairos:dev": "node src/kairos/cli.js",
+    
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "build:clean": "rm -rf dist",
+    
+    "start": "npm run build && npm run kairos",
+    "dev": "concurrently \"npm run build:watch\" \"npm run kairos:dev\"",
+    
+    "check": "node --check src/kairos/cli.js && node --check src/kairos/core/*.js",
+    "check:ts": "tsc --noEmit",
+    
+    "test": "node src/kairos/test/smoke.js && node src/kairos/test/brain-mock.js && node src/kairos/test/patch-and-stream.js && node src/kairos/test/tool-run-context.js",
+    "test:ts": "echo 'TypeScript tests coming soon'",
+    
+    "lint": "eslint src --ext .ts,.js",
+    "lint:fix": "eslint src --ext .ts,.js --fix",
+    
+    "format": "prettier --write \"src/**/*.{ts,js}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,js}\"",
+    
+    "gateway": "node dist/src/kairos/core/gateway/index.js",
+    "gateway:dev": "node src/kairos/core/gateway/index.js",
+    
+    "plugins:load": "node dist/src/kairos/core/plugin-sdk/index.js",
+    "plugins:list": "echo 'Plugin system coming soon'",
+    
+    "skills:load": "echo 'Skill system coming soon'",
+    "skills:list": "ls -la skills/ | head -20"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {},
+  "keywords": [
+    "ai",
+    "agent",
+    "coding",
+    "local-first",
+    "typescript",
+    "plugin",
+    "gateway",
+    "multi-agent",
+    "skills",
+    "memory",
+    "tools"
+  ],
+  "author": "adnqcr7-code",
+  "license": "KCL-1.0",
+  "homepage": "https://github.com/adnqcr7-code/kairosv2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adnqcr7-code/kairosv2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adnqcr7-code/kairosv2/issues"
+  }
+}
